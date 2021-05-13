@@ -56,3 +56,21 @@ p {
 .centered {
   text-align: center;
 }
+
+/* Dark Mode */
+
+body {
+  background-color: #212121;
+  color: #fff;
+}
+
+a {
+  color: #468847
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+      background-color: #FFF;
+      color: #212121;
+  }
+}
