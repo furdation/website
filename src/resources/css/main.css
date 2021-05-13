@@ -1,0 +1,39 @@
+.formatted {
+  font-family: monospace;
+}
+
+.lewd {
+  background-color: palevioletred;
+  color: white;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.column ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  text-align: center;
+}
