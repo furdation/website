@@ -48,3 +48,11 @@ h1, h2, h3 {
 h1 {
   text-align: center;
 }
+
+p {
+  text-align: justify;
+}
+
+.centered {
+  text-align: center;
+}
