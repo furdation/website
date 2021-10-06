@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Furry Tech - Joining Matrix</title>
 
-    <link rel="stylesheet" href="resources/css/main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Furry Tech - Joining Matrix</title>
+  <link rel="stylesheet" href="resources/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
 
-  <body>
-    <div class="container">
-      <h1>Joining Us</h1>
-      <div class="centered"><a href="index.html">Get back to the main page</a></div>
-      <hr />
+<body>
+  <div class="container">
+    <h1>Joining Us</h1>
+    <div class="centered"><a href="index.html">Get back to the main page</a></div>
+    <hr />
+    <!-- WHAT -->
+    <h2>What is Matrix?</h2>
+    <p>Matrix is a <b>protocol</b> made for decentralized (federated) instant messaging, this means that everyone can spin up their server and start to talk with every other Matrix user. As this protocol is open, anyone can implement the specifications into a client (more on that later). Most of those clients are also Open-Source. As of now, Matrix has End-To-End Encrypted private messages by default, and it can also be enabled in any room. You can read more about the protocol itself on their <a href="https://matrix.org">official website</a>.</p>
+    <hr />
+    <!-- HOMESERVER -->
+    <h2>Homeserver</h2>
+    <p>In Matrix, a server is called <i>homeserver</i> and choosing the right one is essential as you will have to trust it. Good lists of homeservers are the <a href="https://www.hello-matrix.net/public_servers.php">Hello Matrix list</a> and <a href="https://chatons.org">the French CHATONS</a>. It is generally preferable to avoid the official homeserver (Matrix.org) as it is already overloaded with users and can sometimes be very slow.</p>
+    <hr />
+    <!-- CLIENTS -->
+    <h2>Clients</h2>
+    <p>In Matrix, you have the choice to choose between a good number of clients, here is a small list of the best with a description:</p>
+    <ul>
+      <li><a href="https://element.io">Element</a> - The official client, the best client to experience Matrix</li>
+      <li><a href="https://fluffychat.im">Fluffychat</a> - A cute client, probably the second most advanced of all</li>
+      <li><a href="https://github.com/tulir/gomuks">GoMuks</a> - A console-based client</li>
+    </ul>
+    <p>All the clients listed support E2EE, some other might not.</p>
+    <hr />
+    <!-- OTHER INFORMATION -->
+    <h2>Other Information</h2>
+    <p>On Matrix, every user has an MXID (Matrix ID) that is composed like this: <span class="formatted">@user:server.tld</span> for instance, the user <span class="formatted">@me:jae.fi</span> means that the user is "me" and is located on the homeserver "jae.fi". The same goes with rooms but with <span class="formatted">#</span> instead of <span class="formatted">@</span>.</p>
+  </div>
+</body>
 
-      <!-- WHAT -->
-      <h2>What is Matrix?</h2>
-      <p>Matrix is a <b>protocol</b> made for decentralized (federated) instant messaging, this means that everyone can spin up their server and start to talk with every other Matrix user. As this protocol is open, anyone can implement the specifications into a client (more on that later). Most of those clients are also Open-Source. As of now, Matrix has End-To-End Encrypted private messages by default, and it can also be enabled in any room. You can read more about the protocol itself on their <a href="https://matrix.org">official website</a>.</p>
-      <hr />
-
-      <!-- HOMESERVER -->
-      <h2>Homeserver</h2>
-      <p>In Matrix, a server is called <i>homeserver</i> and choosing the right one is essential as you will have to trust it. Good lists of homeservers are the <a href="https://publiclist.anchel.nl/">Anchel list</a> and <a href="https://chatons.org">the French CHATONS</a>. It is generally preferable to avoid the official homeserver (Matrix.org) as it is already overloaded with users and can sometimes be very slow.</p>
-      <hr />
-
-      <!-- CLIENTS -->
-      <h2>Clients</h2>
-      <p>In Matrix, you have the choice to choose between a good number of clients, here is a small list of the best with a description:</p>
-      <ul>
-        <li><a href="https://element.io">Element</a> - The official client, the best client to experience Matrix</li>
-        <li><a href="https://fluffychat.im">Fluffychat</a> - A cute client, probably the second most advanced of all</li>
-        <li><a href="https://github.com/tulir/gomuks">GoMuks</a> - A console-based client</li>
-      </ul>
-      <p>All the clients listed support E2EE, some other might not.</p>
-      <hr />
-
-      <!-- OTHER INFORMATION -->
-      <h2>Other Information</h2>
-      <p>On Matrix, every user has an MXID (Matrix ID) that is composed like this: <span class="formatted">@user:server.tld</span> for instance, the user <span class="formatted">@me:jae.fi</span> means that the user is "me" and is located on the homeserver "jae.fi". The same goes with rooms but with <span class="formatted">#</span> instead of <span class="formatted">@</span>.</p>
-    </div>
-  </body>
 </html>
