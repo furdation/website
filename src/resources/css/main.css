@@ -1,29 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, ul {
+  margin: 16px 0 16px 0;
+}
+
 @font-face {
-  font-family: 'opensans';
-  src: url('../fonts/OpenSans-Regular.ttf')  format('truetype');
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
 }
 
 body {
-  font-family: opensans;
+  font-family: Open Sans;
+  display: flex;
+  justify-content: center;
 }
 
 .formatted {
   font-family: monospace;
 }
 
-.lewd {
-  background-color: palevioletred;
-  color: white;
-  text-transform: uppercase;
-}
-
-.container {
-  margin: auto;
+main {
   width: 100%;
   max-width: 1000px;
-  border: 3px solid green;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 video {
@@ -37,31 +38,21 @@ video {
 
 .column ul {
   list-style: none;
+  padding-left: 0;
 }
 
-h1, h2, h3 {
-  text-align: center;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-h1 {
-  text-align: center;
-}
-
-p {
-  text-align: justify;
+.row > * {
+  width: 100%;
 }
 
 .centered {
   text-align: center;
 }
-
-/* Dark Mode */
 
 body {
   background-color: #212121;
@@ -72,9 +63,17 @@ a {
   color: #468847
 }
 
+.eighteenplus {
+  font-size: 0.7em;
+  color: #fff;
+  background-color: #f00;
+  padding: 3px;
+  border-radius: 50%;
+}
+
 @media screen and (prefers-color-scheme: light) {
   body {
-      background-color: #FFF;
-      color: #212121;
+    background-color: #FFF;
+    color: #212121;
   }
 }
