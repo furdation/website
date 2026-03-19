@@ -1,0 +1,26 @@
+stages:
+  - deploy
+ 
+deploy:
+  stage: deploy
+  image: alpine
+ 
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+ 
+  before_script:
+    - apk add brotli
+ 
+  script:
+    - find src -type f -regex '.*\.\(htm\|html\|xml\|txt\|text\|js\|css\|svg\)$' -exec gzip -f -k {} \;
+    - find src -type f -regex '.*\.\(htm\|html\|xml\|txt\|text\|js\|css\|svg\)$' -exec brotli -f -k {} \;
+ 
+  artifacts:
+    paths:
+      - src/
+ 
+  pages: true
+
+  environment:
+    name: 'production'
+    url: 'https://furry.lol'
