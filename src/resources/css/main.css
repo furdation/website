@@ -8,17 +8,18 @@ body {
   box-sizing: border-box;
 }
 
-p, h1, h2, h3, h4, h5, ul {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul {
   margin: 16px 0 16px 0;
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
-}
-
 body {
-  font-family: Open Sans;
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -31,33 +32,16 @@ body {
 main {
   width: 100%;
   max-width: 1000px;
+  padding-top: 50px;
 }
 
 video {
   width: 100%;
 }
 
-.column {
-  float: left;
-  width: 50%;
-}
-
-.column ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.row > * {
-  width: 100%;
-}
-
 .centered {
   text-align: center;
+    margin: 0 auto;
 }
 
 body {
@@ -83,3 +67,71 @@ a {
     color: #212121;
   }
 }
+
+.button {
+  font: bold 1.2em monospace;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 5px;
+  transition: background-color 0.1s ease;
+}
+
+.button:hover {
+  background-color: #DBFFEB;
+}
+
+hr {
+  margin: 25px;
+}
+
+li {
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: #393E46;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: #210F37;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
