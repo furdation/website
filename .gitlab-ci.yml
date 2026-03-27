@@ -14,6 +14,7 @@ deploy:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       variables:
         PAGES_PREFIX: "mr-$CI_MERGE_REQUEST_IID"
+        PAGES_ENVIRONMENT: "$mr-$CI_MERGE_REQUEST_IID"
 
   before_script:
     - apk add brotli
@@ -31,5 +32,5 @@ deploy:
     path_prefix: "$PAGES_PREFIX"
 
   environment:
-    name: "$PAGES_PREFIX"
+    name: "$PAGES_ENVIRONMENT"
     url: "$CI_PAGES_URL/$PAGES_PREFIX"
