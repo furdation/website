@@ -1,26 +1,35 @@
 stages:
   - deploy
- 
+
 deploy:
   stage: deploy
   image: alpine
- 
+
+  variables:
+    PAGES_PREFIX: ""
+    PAGES_ENVIRONMENT: "production"
+
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
- 
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      variables:
+        PAGES_PREFIX: "mr-$CI_MERGE_REQUEST_IID"
+
   before_script:
     - apk add brotli
- 
+
   script:
     - find src -type f -regex '.*\.\(htm\|html\|xml\|txt\|text\|js\|css\|svg\)$' -exec gzip -f -k {} \;
     - find src -type f -regex '.*\.\(htm\|html\|xml\|txt\|text\|js\|css\|svg\)$' -exec brotli -f -k {} \;
- 
+
   artifacts:
     paths:
       - src/
- 
+
   pages:
     publish: src
+    path_prefix: "$PAGES_PREFIX"
 
   environment:
-    name: 'production'
+    name: "$PAGES_PREFIX"
+    url: "$CI_PAGES_URL/$PAGES_PREFIX"
